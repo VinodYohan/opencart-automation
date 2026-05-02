@@ -4,7 +4,11 @@ export default defineConfig({
   testDir: './tests',
   timeout: 60000,
   retries: 1,
-  reporter: 'html',
+  reporter: [
+    ['html'],                          // default HTML report
+    ['allure-playwright'],             // allure report
+    ['list']                           // terminal output
+  ],
 
   use: {
     baseURL: 'https://tutorialsninja.com/demo',

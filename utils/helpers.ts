@@ -10,3 +10,10 @@ export function generateEmail(): string {
   const random = Math.floor(Math.random() * 9999);
   return `testuser${timestamp}${random}@mailinator.com`;
 }
+
+export async function takeScreenshot(page: Page, name: string) {
+  await page.screenshot({
+    path: `test-results/screenshots/${name}-${Date.now()}.png`,
+    fullPage: true
+  });
+}

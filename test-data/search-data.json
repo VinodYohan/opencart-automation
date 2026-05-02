@@ -1,0 +1,11 @@
+{
+  "validSearches": [
+    { "keyword": "MacBook", "expectedResults": true },
+    { "keyword": "iPhone", "expectedResults": true },
+    { "keyword": "Samsung", "expectedResults": true }
+  ],
+  "invalidSearches": [
+    { "keyword": "xyzabc123", "expectedResults": false },
+    { "keyword": "qqqqqqqq", "expectedResults": false }
+  ]
+}
