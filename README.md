@@ -1,40 +1,81 @@
-# OpenCart Automation Testing Project
+# 🛒 OpenCart Automation Testing Project
 
 ![Playwright Tests](https://github.com/VinodYohan/opencart-automation/actions/workflows/playwright.yml/badge.svg)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green)
+![Playwright](https://img.shields.io/badge/Playwright-Latest-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-Latest-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Project Overview
-Automation testing project for OpenCart demo site using Playwright and TypeScript.
+End-to-end automation testing project for OpenCart e-commerce platform built as a portfolio project to demonstrate automation testing skills using industry standard tools and best practices.
 
 ## 🌐 Application Under Test
 [TutorialsNinja OpenCart Demo](https://tutorialsninja.com/demo)
 
 ## 🛠️ Tech Stack
-- **Playwright** - Test automation framework
-- **TypeScript** - Programming language
-- **GitHub Actions** - CI/CD pipeline
-- **Allure** - Test reporting
-- **Node.js** - Runtime environment
+| Tool | Purpose |
+|------|---------|
+| Playwright | Test automation framework |
+| TypeScript | Programming language |
+| GitHub Actions | CI/CD pipeline |
+| Allure | Test reporting |
+| Node.js | Runtime environment |
+| Page Object Model | Design pattern |
 
 ## 📁 Project Structure
 opencart-automation/
-├── pages/          # Page Object Model files
-├── tests/          # Test spec files
-├── test-data/      # Test data JSON files
-├── utils/          # Helper functions and fixtures
-└── .github/        # GitHub Actions workflow
+├── .github/
+│   └── workflows/
+│       └── playwright.yml   # CI/CD pipeline
+├── pages/                   # Page Object Model
+│   ├── HomePage.ts
+│   ├── LoginPage.ts
+│   ├── RegisterPage.ts
+│   ├── SearchPage.ts
+│   └── CartPage.ts
+├── tests/                   # Test spec files
+│   ├── login.spec.ts
+│   ├── register.spec.ts
+│   ├── search.spec.ts
+│   ├── cart.spec.ts
+│   ├── account.spec.ts
+│   └── search-data-driven.spec.ts
+├── test-data/               # Test data
+│   ├── users.json
+│   └── search-data.json
+├── utils/                   # Helpers & fixtures
+│   ├── helpers.ts
+│   └── fixtures.ts
+└── playwright.config.ts
 
-## 🧪 Test Cases
-| Module | Tests |
-|--------|-------|
-| Login | 4 tests |
-| Register | 4 tests |
-| Search | 4 tests |
-| Cart | 4 tests |
-| Data Driven | 5 tests |
-| Account | 4 tests |
-| **Total** | **25 tests** |
+## 🧪 Test Coverage
+| Module | Test Cases | Status |
+|--------|-----------|--------|
+| Login | 4 | ✅ Passing |
+| Register | 4 | ✅ Passing |
+| Search | 4 | ✅ Passing |
+| Cart | 4 | ✅ Passing |
+| Account | 4 | ✅ Passing |
+| Data Driven Search | 5 | ✅ Passing |
+| **Total** | **25** | ✅ **All Passing** |
+
+## ✨ Key Features
+- ✅ Page Object Model design pattern
+- ✅ Data driven testing with JSON
+- ✅ Custom test fixtures for logged-in state
+- ✅ Screenshot capture on test failure
+- ✅ Video recording on test failure
+- ✅ Allure test reporting
+- ✅ GitHub Actions CI/CD pipeline
+- ✅ Auto retry on failure
 
 ## 🚀 How to Run
+
+### Clone the project
+```bash
+git clone https://github.com/VinodYohan/opencart-automation.git
+cd opencart-automation
+```
 
 ### Install dependencies
 ```bash
@@ -52,7 +93,7 @@ npx playwright test
 npx playwright test --headed
 ```
 
-### Run specific file
+### Run specific test file
 ```bash
 npx playwright test tests/login.spec.ts
 ```
@@ -68,6 +109,16 @@ npx allure generate allure-results --clean -o allure-report
 npx allure open allure-report
 ```
 
+## 📊 Test Report Preview
+After running tests, open the HTML report:
+```bash
+npx playwright show-report
+```
+
 ## 👤 Author
-**Vinod Yohan**  
-[LinkedIn](https://linkedin.com/in/vinod-yohan) | [GitHub](https://github.com/VinodYohan)
+**Vinod Yohan**
+- 💼 [LinkedIn](https://linkedin.com/in/vinod-yohan)
+- 🐙 [GitHub](https://github.com/VinodYohan)
+
+## 📄 License
+This project is licensed under the MIT License.
