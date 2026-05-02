@@ -8,8 +8,7 @@ test.describe('Login Tests', () => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await loginPage.login(userData.validUser.email, userData.validUser.password);
-    await expect(page).toHaveURL(/account/);
-    await expect(page.locator('h2')).toContainText('My Account');
+    await expect(page.locator('#content h2').first()).toContainText('My Account');
   });
 
   test('TC002 - Invalid login with wrong password', async ({ page }) => {

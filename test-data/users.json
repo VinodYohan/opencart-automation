@@ -1,9 +1,9 @@
 {
   "validUser": {
-    "email": "testuser123@mailinator.com",
-    "password": "Test@1234",
-    "firstName": "Test",
-    "lastName": "User"
+    "email": "venuravinodyohan2003@gmail.com",
+    "password": "YxZ97YWSM49Pp#",
+    "firstName": "vinod",
+    "lastName": "yohan"
   },
   "invalidUser": {
     "email": "wrong@email.com",

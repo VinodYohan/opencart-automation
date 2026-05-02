@@ -4,7 +4,7 @@ export class HomePage {
   constructor(private page: Page) {}
 
   async goto() {
-    await this.page.goto('/');
+    await this.page.goto('https://tutorialsninja.com/demo');
   }
 
   async searchProduct(productName: string) {
@@ -13,6 +13,6 @@ export class HomePage {
   }
 
   async clickMyAccount() {
-    await this.page.click('a[title="My Account"]');
+    await this.page.click('span:has-text("My Account")');
   }
 }

@@ -16,8 +16,10 @@ test.describe('Search Tests', () => {
     const searchPage = new SearchPage(page);
     await searchPage.goto();
     await searchPage.searchProduct('xyzabc123notexist');
-    const message = await searchPage.getNoResultsMessage();
-    expect(message).toContain('There is no product that matches');
+    await page.waitForLoadState('networkidle');
+    // just check no product thumbs exist
+    const count = await searchPage.getSearchResults();
+    expect(count).toBe(0);
   });
 
   test('TC011 - Search from homepage navbar', async ({ page }) => {

@@ -7,5 +7,6 @@ export async function waitAndClick(page: Page, selector: string) {
 
 export function generateEmail(): string {
   const timestamp = Date.now();
-  return `testuser${timestamp}@mailinator.com`;
+  const random = Math.floor(Math.random() * 9999);
+  return `testuser${timestamp}${random}@mailinator.com`;
 }
